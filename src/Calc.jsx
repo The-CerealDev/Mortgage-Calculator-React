@@ -12,11 +12,15 @@ function CalcResults(){
   );
 }
 function CalcInput() {
-  const [range, setRange] = useState(0);
+  const [amountRange, setAmountRange] = useState(0);
+  const [term, setTerm] = useState(0);
+  const [interest, setInterest] = useState(0);
 
   function handleSliderChange(e){
     
-    e.target.value !== '' ?setRange(e.target.value):setRange(0);
+    // e.target.value !== '' ?
+    setAmountRange(e.target.value);
+    // :setAmountRange(0);
 }
 
   return (
@@ -24,8 +28,8 @@ function CalcInput() {
       <form action="" className="CalcInput">
         <label htmlFor="" className="">
           Mortgage Amount:
-          <input type="" placeholder={0} value={range} onChange={handleSliderChange}/>
-          <input placeholder={0} type="range" value={range} id="mortAmountSlider" min={1} max={1000000} onChange={handleSliderChange}/>
+          <input type="" placeholder={0} value={amountRange} onChange={handleSliderChange}/>
+          <input placeholder={0} type="range" value={amountRange!=''?amountRange:0} id="mortAmountSlider" min={1} max={1000000} onChange={handleSliderChange}/>
         </label>
   
         <label htmlFor="" className="">
