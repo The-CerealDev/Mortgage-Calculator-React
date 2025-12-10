@@ -22,7 +22,7 @@ body {
   justify-content: center;
   padding-inline: 5%;
 }
-.Logo h1 {
+.Logo h1{
   font-size: 100%;
   margin-left: auto;
 }
@@ -31,4 +31,16 @@ body {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+}
+
+.CalcInput{
+  display: flex;
+  flex-direction: column;
+}
+input[type='range']{
+  -webkit-appearance: none;
+  background: #000;
+  width: 50%;
+  margin-left: auto;
+
 }
