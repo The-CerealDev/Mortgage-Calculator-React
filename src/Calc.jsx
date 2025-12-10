@@ -22,27 +22,37 @@ function CalcInput() {
     setAmountRange(e.target.value);
     // :setAmountRange(0);
 }
+  function handleTerm(e){
+    
+    // e.target.value !== '' ?
+    setTerm(e.target.value);
+    // :setAmountRange(0);
+}
+  function handleInterest(e){
+    setInterest(e.target.value);
+  }
+
 
   return (
     <>
       <form action="" className="CalcInput">
-        <label htmlFor="" className="">
+        <label>
           Mortgage Amount:
           <input type="" placeholder={0} value={amountRange} onChange={handleSliderChange}/>
-          <input placeholder={0} type="range" value={amountRange!=''?amountRange:0} id="mortAmountSlider" min={1} max={1000000} onChange={handleSliderChange}/>
+          <input placeholder={0} type="range" value={amountRange!=''?amountRange:0} id="mortAmountSlider" min={0} max={1000000} onChange={handleSliderChange}/>
         </label>
   
-        <label htmlFor="" className="">
-          Term in years:<input />
-          <input type="range" id="mortAmountSlider" min={0} max={1000000} />
+        <label>
+          Term in years:<input value={term} onChange={handleTerm} />
+          <input type="range" id="Slider" value={term !=''?term:0} onChange={handleTerm} min={0} max={1000000} />
 
         </label>
 
-        <label htmlFor="" className="">
+        <label>
           
-          Interest Rate:<input/>
+          Interest Rate:<input value={interest} onChange={handleInterest}/>
 
-          <input type="range" id="mortAmountSlider" min={0} max={1000000} />
+          <input type="range" id="Slider" value={interest!=''?interest:0}onChange={handleInterest}min={0} max={1000000} />
         </label>
       </form>
       
